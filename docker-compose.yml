@@ -1,0 +1,14 @@
+version: '3'
+services:
+  bedrock-server:
+    image: bedrock-server:latest
+    ports:
+    - 19132:19132/udp
+    tty: true
+    #volumes:
+    #- ./data:/bedrock-server
+networks:
+  default:
+    external:
+      name: bridge
+
